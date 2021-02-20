@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    color:  #333;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.navbar{
+    background-color:#dc3545;
+    width: 100%;
+    height: 60px;
+    padding-top: 15px;
+    font-size: 1.5rem;
+    color: #ffff;
+}
+.nav{
+    margin: 0 30px;
+}
+.container{
+    max-width: 80%;
+    margin: auto;
+}
+.form{
+    padding: 30px 0;
+}
+.btn{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: opacity .2s ease-in;
+    outline: none;
+    font-weight: 600;
+}
+.search-input{
+    width: 100%;
+    font-weight: 600;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.search-btn{
+    width: 100%;
+
+    color:white;
+    background:#333;
+
+    margin: 1.2rem 0;
+}
+
+.search-btn:hover{
+    background: gray;
+    color:white;
+    transition: all 0.3s ease;
+    
+}
+.border-dotted{
+    border: 1px dotted #ccc ;
+}
+.user-card{
+    padding: 16px;
+    margin: 11px 0;
+    display: flex;
+}
+.img-card{
+    width: 50%;
+    text-align: center;
+}
+.img-card .avtar{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #ccc;
+}
+img{
+width: 100%;
+}
+h1{
+color: #333;
+}
+.info-card{
+    width: 50%;
+    margin-top: 30px;
+}
+.btn-dark{
+    background-color: #333;
+    color: #ffff;
+    transition: opacity .2s ease-in;
+}
+
+.btn-dark:hover{
+    background-color: gray;
+}
+a{
+    text-decoration: none;
+}
+.statistics{
+    color: #ffff;
+    justify-content: center;
+}
+.statistics div{
+    font-size: .8rem;
+    padding: .2rem .7rem;
+    text-align: center;
+    margin: .3rem;
+    border-radius: 5px;
+}
+.info-card p{
+    margin-top: 25px;
+}
+.bg-red{
+    background-color: #dc3545;
+}
+.bg-green{
+    background-color: #28a745;
+}
+.bg-alpha{
+    background-color: #f4f4f4;
+    color: #333;
+}
+.bg-dark{
+    background-color: #333;
+}
+.project a {
+    color: #dc3545;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+.project a:hover{
+    color: #666;
+}
+.d-none{
+    display: none;
+}
+.d-block{
+    display: block;
+
+}
+.d-flex {
+    display: flex;
+}
+.massage{
+    background-color: rgb(224 221 221 / 50%);
+    padding: 10px;
+
+    margin: 10px 0;
+
+}
