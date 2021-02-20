@@ -7,16 +7,16 @@ const clientId = "6a8837a20aa1cb6ea9c7";
 const clientSecret = "9a4e3607054c7b348e585d0d7e36226d4ce93a7b";
 
 searchBtn.addEventListener("click",showData);
-// inputValue
-//     .addEventListener("keyup", (event) => {
-        
-//       if (event.keyCode === 13) {
-//         event.preventDefault();
-//         console.log("enter...");
-    
-//       }
-      
-//     });
+
+
+function handle(e){
+    if(e.key === "Enter"){
+        e.preventDefault();
+        showData(e);
+    }
+
+    return false;
+}
 
 function showData(){
     const inputValue=document.querySelector("#inputSearch").value.trim();
@@ -57,14 +57,14 @@ function showData(){
 
                     fetch(`https://api.github.com/users/${inputValue}/repos?client_id=${clientId}&client_secret=${clientSecret}`)
                     .then((response) => {
-                            if(!response.ok ){ 
-                                massage.classList.remove('d-none');
-                                setTimeout(removeMassage, 3000);
-                                function removeMassage() {
-                                massage.classList.add('d-none');
+                            // if(!response.ok){ 
+                            //     massage.classList.remove('d-none');
+                            //     setTimeout(removeMassage, 3000);
+                            //     function removeMassage() {
+                            //     massage.classList.add('d-none');
                             
-                                }
-                            }
+                            //     }
+                            // }
                             return response.json();
                             })
                             .then((repos)=>{

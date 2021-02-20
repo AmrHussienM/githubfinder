@@ -145,17 +145,9 @@ a{
 .d-none{
     display: none;
 }
-.d-block{
-    display: block;
 
-}
-.d-flex {
-    display: flex;
-}
 .massage{
     background-color: rgb(224 221 221 / 50%);
     padding: 10px;
-
     margin: 10px 0;
-
 }
