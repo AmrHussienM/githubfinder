@@ -1,10 +1,10 @@
 const searchBtn=document.querySelector("#btnSearch");
-const inputValue=document.querySelector("#inputSearch");
 const massage=document.querySelector(".massage");
 const wrapperProfile=document.getElementById("wrapper-profile");
 const wrapperProjects=document.getElementById("wrapper-projects");
 const clientId = "6a8837a20aa1cb6ea9c7";
 const clientSecret = "9a4e3607054c7b348e585d0d7e36226d4ce93a7b";
+
 
 searchBtn.addEventListener("click",showData);
 
@@ -17,6 +17,12 @@ function handle(e){
 
     return false;
 }
+
+// function notFound() {
+//     const notFound = document.getElementById("notFound");
+//     notFound.innerHTML = "User Not Found";
+
+//   }
 
 function showData(){
     const inputValue=document.querySelector("#inputSearch").value.trim();
@@ -55,7 +61,8 @@ function showData(){
                     </div>
                     `;
 
-                    fetch(`https://api.github.com/users/${inputValue}/repos?client_id=${clientId}&client_secret=${clientSecret}`)
+                    
+                    fetch(`https://api.github.com/users/${inputValue}/repos?per_page=5&sort=created:asc&client_id=${clientId}&client_secret=${clientSecret}`)//fetch(`https://api.github.com/users/${inputValue}/repos?client_id=${clientId}&client_secret=${clientSecret}`)
                     .then((response) => {
                             // if(!response.ok){ 
                             //     massage.classList.remove('d-none');
@@ -71,7 +78,7 @@ function showData(){
                                 
                             let output = "";
                             
-                                repos.slice(0,5).forEach((repo)=>{
+                                repos.forEach((repo)=>{
                                     output +=`<div class="last-projects">
                                             <div class="user-card border-dotted project">
                                                 <a href="${repo.html_url}" target="_blank">${repo.name}</a>
@@ -83,12 +90,12 @@ function showData(){
                             wrapperProjects.innerHTML = output;
                         
                             });
-                            
+    
 
         }
         wrapperProfile.innerHTML = html;
         wrapperProjects.innerHTML="";
-   
+           
     });
 
 }

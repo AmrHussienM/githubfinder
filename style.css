@@ -22,16 +22,20 @@ body{
     font-size: 1.5rem;
     color: #ffff;
 }
+
 .nav{
     margin: 0 30px;
 }
+
 .container{
     max-width: 80%;
     margin: auto;
 }
+
 .form{
     padding: 30px 0;
 }
+
 .btn{
     padding: 10px;
     border: none;
@@ -51,17 +55,15 @@ body{
 
 .search-btn{
     width: 100%;
-
     color:white;
     background:#333;
-
     margin: 1.2rem 0;
 }
 
 .search-btn:hover{
     background: gray;
     color:white;
-    transition: all 0.3s ease;
+    transition: opacity .3s ease-in;
     
 }
 .border-dotted{
@@ -85,9 +87,11 @@ body{
     margin-bottom: 20px;
     background-color: #ccc;
 }
+
 img{
 width: 100%;
 }
+
 h1{
 color: #333;
 }
@@ -147,7 +151,18 @@ a{
 }
 
 .massage{
-    background-color: rgb(224 221 221 / 50%);
+    background-color: rgb(224 221 221);
     padding: 10px;
     margin: 10px 0;
+}   
+
+#notFound{
+    
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
 }
